@@ -1,0 +1,132 @@
+.App {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Ajustado para mantener el contenido en la parte superior */
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 20px;
+}
+
+.App-header {
+  background-color: #f0f0f0;
+  padding: 20px;
+  width: 100%;
+  position: sticky; /* Hace que el header se mantenga en la parte superior */
+  top: 0; /* Lo fija al top */
+  z-index: 1000; /* Asegura que el header esté por encima del contenido */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Agrega una sombra sutil para que destaque */
+  margin-bottom: 10px;
+}
+
+.App-header h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Resto del CSS sigue igual */
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.button {
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.button.active {
+  box-shadow: 0 0 30px 15px rgba(255, 255, 255, 0.9);
+  transform: scale(1.2);
+  border: 5px solid rgba(255, 255, 255, 0.7);
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.game-over-message {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.game-over-message button {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.difficulty-selector {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.difficulty-selector button {
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #9e9d9d;
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.difficulty-selector button:hover {
+  background-color: #7a7a7a;
+}
+
+.color-selector {
+  margin-top: 20px;
+}
+
+.color-selector button {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #9e9d9d;
+  color: #fff;
+  border: none;
+}
+
+.color-selector button:hover {
+  background-color: #7a7a7a;
+}
+
+@media (max-width: 600px) {
+  .App-header h1 {
+    font-size: 20px;
+  }
+
+  .button {
+    width: 80px;
+    height: 80px;
+    font-size: 16px;
+  }
+
+  .difficulty-selector button,
+  .color-selector button {
+    padding: 8px;
+    font-size: 16px;
+  }
+
+  .game-over-message {
+    font-size: 16px;
+  }
+}
